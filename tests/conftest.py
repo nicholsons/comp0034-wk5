@@ -35,7 +35,6 @@ def app():
     # database)
     with app.app_context():
         # Close the database session
-        db.session.close()
         db.session.remove()
         db.engine.dispose()
     os.unlink(db_path)
