@@ -27,6 +27,7 @@ def create_app(test_config=None):
         SECRET_KEY='l-tirPCf1S44mWAGoWqWlA',
         # configure the SQLite database, relative to the app instance folder
         SQLALCHEMY_DATABASE_URI="sqlite:///" + os.path.join(app.instance_path, 'paralympics.sqlite'),
+        SQLALCHEMY_ECHO = True,
     )
 
     if test_config is None:
